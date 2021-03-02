@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    background: #000;
+}
+
+body,
+input,
+textarea,
+select {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background: #000;
+}
+.outer {
+    background-image: url("space.jpg");
+    background-color: #000;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position-y: 100px;
+}
+
+.header {
+    min-height: 110px;
+}
+.footer {
+    padding-top: 1.5rem;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.25);
+    margin-top: 2.5rem;
+}
+
+.logo {
+    width: 500px;
+    height: 100px;
+    margin-left: calc(50% - 250px);
+    transition: all 0.75s ease;
+}
+
+.logo-raised {
+    width: 250px;
+    height: 50px;
+    margin-left: 0;
+}
+@media (max-width: 700px) {
+    html {
+        font-size: 9px;
+    }
+    .navbar {
+        font-size: 1.5rem;
+    }
+    .logo {
+        width: 250px;
+        height: 50px;
+        margin-left: calc(50% - 125px);
+    }
+}
+
+.message {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 0;
+    color: black;
+    font-size: 0.9 rem;
+    transition: opacity, flex-grow 0.75s ease;
+}
+
+.message-raised {
+    opacity: 1;
+    border: rgba(255, 255, 255, 0.15) 1px solid;
+    border-bottom: 0px;
+    border-radius: 3px 3px 0 0;
+}
+
+.message-body {
+    position: absolute;
+    width: 100%;
+    border: 0;
+    color: #ccc;
+    opacity: 0;
+    padding: 1em 1.25em;
+    transition: opacity 0.75s ease;
+}
+
+.message-body-shown {
+    opacity: 1;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.navbar a {
+    color: rgba(255, 255, 255, 1);
+    margin: 10px;
+    z-index: 100;
+}
+
+.navbar a:hover i {
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+.response {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 50vw;
+    min-height: 10vh;
+    border: rgba(0, 0, 0, 0.55) solid 2px;
+    background: rgba(255, 248, 113, 0.85);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+    padding: 0.8rem;
+    transition: transform 0.5s ease;
+}
+
+.response-shown {
+    transform: translate(-50%, 0%);
+}
